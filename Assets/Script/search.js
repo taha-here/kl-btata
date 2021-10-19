@@ -168,31 +168,32 @@ export let ahmed = [
     image: "http://hp-api.herokuapp.com/images/snape.jpg",
   },
 ];
-const charactersList = document.getElementById("charactersList");
-const searchBar = document.getElementById("search-val");
 
-searchBar.addEventListener("keyup", (e) => {
-  if (13 == e.keyCode) {
+// const charactersList = document.getElementById("charactersList");
+// const searchBar = document.getElementById("search-val");
 
-    const searchString = e.target.value.toLowerCase();
-    sessionStorage.setItem("search", JSON.stringify(searchString));
+// searchBar.addEventListener("keyup", (e) => {
+//   if (13 == e.keyCode) {
 
-    const filteredCharacters = ahmed.filter((character) => {
-      return (
-        character.name.toLowerCase().includes(searchString) ||
-        character.house.toLowerCase().includes(searchString)
-      );
-    });
-    sessionStorage.setItem(
-      "filteredCharacters",
-      JSON.stringify(filteredCharacters)
-    );
-    //displayCharacters(filteredCharacters);
+//     const searchString = e.target.value.toLowerCase();
+//     sessionStorage.setItem("search", JSON.stringify(searchString));
 
-    window.location = "search.html";
-  }
+//     const filteredCharacters = ahmed.filter((character) => {
+//       return (
+//         character.name.toLowerCase().includes(searchString) ||
+//         character.house.toLowerCase().includes(searchString)
+//       );
+//     });
+//     sessionStorage.setItem(
+//       "filteredCharacters",
+//       JSON.stringify(filteredCharacters)
+//     );
+//     //displayCharacters(filteredCharacters);
 
-});
+//     window.location = "search.html";
+//   }
+
+// });
 
 
 

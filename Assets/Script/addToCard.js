@@ -74,7 +74,7 @@ function updateCart() {
     console.log("Cart is Empty!!");
     $(".cart-alert").css({ visibility: "hidden" });
     $(".cart-body").html(
-      "<img src='https://www.dudduwa.com/pub/static/frontend/MageBig/martfury_layout02/en_US/images/empty-cart.svg'>"
+      "<img src='https://www.dudduwa.com/pub/static/frontend/MageBig/martfury_layout02/en_US/images/empty-cart.svg' class='empty-cart'>"
     );
     $(".checkout-btn").attr("disabled", true);
   } else {
@@ -98,7 +98,7 @@ function updateCart() {
 
     cart.map((item) => {
       table += `
-					<tr>
+					<tr data-id="${item.productId}">
 						<td class="table-data"><img class="cart-img" src="${item.productImg}"></td>
 						<td class="table-data">${item.productName}</td>
 						<td class="table-data">Rs. ${item.productPrice}</td>
@@ -146,10 +146,16 @@ function updateCart() {
 }
 
 function deleteItemFromCart(pid) {
-  let cart = JSON.parse(localStorage.getItem("cart"));
-  let newcart = cart.filter((item) => item.productId != pid);
-  localStorage.setItem("cart", JSON.stringify(newcart));
-  updateCart();
+  const elem = document.querySelector(`tr[data-id="${pid}"]`);
+  elem.classList.add('deleting');
+  setTimeout(() => {
+    elem.parentElement.removeChild(elem);
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    let newcart = cart.filter((item) => item.productId != pid);
+    localStorage.setItem("cart", JSON.stringify(newcart));
+    updateCart()
+  }, 1500)
+
 }
 
 $(document).ready(function () {

@@ -1,19 +1,20 @@
 import { ahmed } from "./search.js";
 console.log(ahmed);
 
+
 const searchview = document.getElementById("search-display");
 const displayCharacters = (characters) => {
   const htmlString = characters
-    .map((character) => {
+    ?.map((character) => {
       return `
-                  <li class="character">
-                      <h2>${character.name}</h2>
-                      <p>House: ${character.house}</p>
-                      <img src="${character.image}"></img>
-                  </li>
+              <li class="character">
+                  <h2>${character.name}</h2>
+                  <p>House: ${character.house}</p>
+                  <img src="${character.image}"></img>
+              </li>
               `;
     })
-    .join("");
+    .join("") || 'no results to display';
     searchview.innerHTML = htmlString;
 };
 
@@ -46,9 +47,8 @@ const searchBar = document.getElementById("searchBar");
         console.log(strchr);
 
         const filtereditem = JSON.parse(strchr);
-        console.log(filtereditem);
-        console.log(filtereditem[0].name);
-        displayCharacters(filtereditem);/**
+        displayCharacters(filtereditem);
+        /**
         const htmlString = filtereditem.map((item) => {
             return `
                         <li class="character">
@@ -59,5 +59,8 @@ const searchBar = document.getElementById("searchBar");
                     `;
           })
           .join("");
-        charactersList.innerHTML = htmlString;**/     
+        charactersList.innerHTML = htmlString;    
+        **/
         sessionStorage.clear();   
+        
+        
