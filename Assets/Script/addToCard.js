@@ -125,19 +125,18 @@ function updateCart() {
       table +
       `
 						</table>
-            <div class="d-flex justify-content-end">
-            <table class="table w-auto">
+              <div class="d-flex justify-content-end" data-price-table>
+                <table class="table w-auto">
                   <tr>
                       <td scope="row">Total Item(s) :</td>
-                      <td><span class="price text-yelow">${cart.length}</span></td>
+                      <td><span class="price text-yelow" data-total-items>${cart.length}</span></td>
                     </tr>
                     <tr>
                       <td scope="row">Total Price :</td>
-                      <td><span class="price text-yelow">Rs. ${totalPrice}</span></td>
+                      <td><span class="price text-yelow" data-total-price>Rs. ${totalPrice}</span></td>
                     </tr>
-              </table>
-          					<h5> </h5>
-        				</div>
+                </table>
+        			</div>
 `;
 
     $(".cart-body").html(table);
@@ -153,7 +152,12 @@ function deleteItemFromCart(pid) {
     let cart = JSON.parse(localStorage.getItem("cart"));
     let newcart = cart.filter((item) => item.productId != pid);
     localStorage.setItem("cart", JSON.stringify(newcart));
-    updateCart()
+    if (newcart.length === 0) updateCart();
+    else{
+      document.querySelector('[data-total-items]').textContent = newcart.length;
+      document.querySelector('[data-total-price]').textContent = newcart
+        .reduce((acc, item) => (acc += (item.productPrice * item.productQuantity)), 0)
+    }
   }, 1500)
 
 }
