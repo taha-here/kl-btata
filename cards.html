@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Welcome To The Stock Mart</title>
+	<link rel="stylesheet" href="Assets/Css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="header">
+		<a href="Index.html">
+			<img src="Logo/logo.png" id="logo" alt="Stock Mart" width="350px">
+		</a>
+		<div class="search-container">
+			<div action="#" class="searchbar">
+				<input class="search-type"  id="search-val" type="text" placeholder="Search Here..." name="search-val">
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-main sticky-top">
+		<a href="Index.html" class="navbar-brand  page-down-preview" style="display: none;">
+			<img src="Logo/logo.png" id="logo" alt="Stock Mart" width="300px"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggle"
+			aria-controls="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="toggle-size"></span><i class="fa fa-bars" aria-hidden="true"></i></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="nav-toggle">
+			<ul class="navbar-nav ml-auto pr-5">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Deals</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="categories" role="button" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">
+						Categories
+					</a>
+					<div class="dropdown-menu" aria-labelledby="categories">
+						<a class="dropdown-item" href="#">Staples Foods</a>
+						<a class="dropdown-item" href="#">Vegetable Foods</a>
+						<a class="dropdown-item" href="#">Fresh Meat</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link icon page-down-preview" style="display: none;" href="#" id="nav-search"
+						role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-search">
+						<form class="nav-search-form" action="#">
+							<input class="nav-search-input" type="text" placeholder="Search Here..." name="search">
+							<button class="nav-search-btn" type="submit"><i class="fa fa-search"></i></button>
+						</form>
+					</div>
+				</li>
+
+				<li class="nav-item ">
+					<a class="nav-link icon" href="#!" data-toggle="modal" data-target="#cart">
+						<i class="fa fa-shopping-cart"></i>
+						<span class="cart-alert"></span>
+					</a>
+
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!--                    Main img and get start btn text            -->
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 p-0">
+				<div class="banner-img">
+					<div class="banner-text">
+						<h3>Fresh And Organic</h3>
+						<h1>Your Daily Need</h1>
+						<h2>Products</h2>
+						<button type="button" class="btn get-start-btn" onclick=qauntityChange(87,1)>Get Start</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="container card2_margin">
+		<div class="row">
+			<div class="col-md-12 div_Center">
+				<h2 class="heading_style">Shop By <span class="heading_color"> Categories</span></h2x>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<div class="card" style="width:20rem;">
+					<img src="https://static5.depositphotos.com/1020804/405/i/950/depositphotos_4058882-stock-photo-ripe-red-apple-with-a.jpg"
+						class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Apple</h5>
+						<p class="card-text"> 100rps per kg</p>
+						<p>quantity<input type="number" value="1"> kg</p>
+						<button class="btn btn-primary cart-here">add to card</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="card" style="width:20rem;">
+					<img src="https://static5.depositphotos.com/1020804/405/i/950/depositphotos_4058882-stock-photo-ripe-red-apple-with-a.jpg"
+						class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">green</h5>
+						<p class="card-text"> 100rps per kg</p>
+						<p>quantity<input type="number" value="1"> kg</p>
+						<button class="btn btn-primary cart-there">add to card</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title">Cart</h1>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="cart-body">
+
+					</div>
+
+
+				</div>
+				<div class="modal-footer border-top-0 d-flex justify-content-between">
+					<button type="button" class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+					<button type="button" class="btn btn-success btn-lg  checkout-btn"
+						onclick="goToCheckout()">Checkout</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<custom-footer></custom-footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="Assets/Script/addToCard.js"></script>
+<script src="./common.js"></script>
+<script>
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 120) {
+			$('.page-down-preview').show(1000);
+		}
+		else {
+			$('.page-down-preview').hide(1000);
+		}
+	});
+
+
+
+</script>
+<script src="Assets/Script/search.js"></script>
+</html>
