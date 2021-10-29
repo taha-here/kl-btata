@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Here is StockMark Quality Staples| Online Grocery Shopping in Pakistan</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="Img/Favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Assets/Css/vegetables.css" />
+
+</head>
+
+<body>
+    <!----------------------------------------------header---------------------------------------------->
+
+
+    <div class="container-fluid header">
+      <div class="float-left col-lg-3">
+        <a href="Index.html">
+          <img src="Img/logo.png" id="logo" alt="Stock Mart" width="400px">
+        </a>
+      </div>
+  
+      <div class="float-right col-lg-3 position-bottom">
+        <div class="input-group">
+          <input type="text" class="form-control search-text searchproduct" name="searchproduct"
+            placeholder="Search Here...">
+          <div class="search"><i class="fa fa-search"></i></div>
+        </div>
+      </div>
+  
+    </div>
+  
+  
+    <!----------------------------------------------navbar---------------------------------------------->
+  
+  
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-main sticky-top">
+      <a href="Index.html" class="navbar-brand  page-down-preview" style="display: none;">
+        <img src="Img/logo.png" id="logo" alt="Stock Mart"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggle"
+        aria-controls="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggle-size"></span><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="nav-toggle">
+        <ul class="navbar-nav ml-auto pr-5">
+          <li class="nav-item">
+            <a class="nav-link" href="Index.html">Home</a>
+          </li>
+  
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="!#" id="categories" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+            <div class="dropdown-menu " aria-labelledby="categories">
+              <a class="dropdown-item" href="veg-1.html">Vegetable Foods</a>
+              <a class="dropdown-item active" href="staples-1.html">Staples Foods<span class="sr-only">(current)</span></a>
+              <a class="dropdown-item" href="meat-1.html">Fresh Meat</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link icon page-down-preview" style="display: none;" href="#" id="nav-search" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right searchbox-radius" aria-labelledby="nav-search">
+              <div class="nav-search-form">
+                <input class="nav-search-input searchproduct" name="searchproduct" type="text"
+                  placeholder="Search Here...">
+                <div class="nav-search"><i class="fa fa-search"></i></div>
+              </div>
+            </div>
+          </li>
+  
+          <li class="nav-item">
+            <a id="cart-open" class="nav-link icon" href="#!" data-toggle="modal" data-target="#cart">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="cart-alert"></span>
+            </a>
+  
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  <!----------------------------------------------Banner---------------------------------------------->
+
+  <div class="container-fluid bg-gray">
+    <div class="row">
+      <div class="col-md-12 p-0">
+        <div class="banner-img">
+          <div class="banner-text">
+            <h3>Healthy and Organic</h3>
+            <h1>Want Some</h1>
+            <h2>Vegetables?</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="row">
+    <div class="col-lg-12 main-heading">
+<h2 class="">Check out our <span class="text-yelow">Vegetable Foods</h2></span>
+</div>
+</div>
+</div>
+  <!----------------------------------------------Deals Card---------------------------------------------->
+
+  <div class="container pb-5">
+    <div class="row" id="item-display" data-category="staple" data-min="0" data-max="9">
+      </div>
+    </div>
+
+      
+
+
+
+
+
+
+
+
+  <!----------------------------------------------Footer---------------------------------------------->
+
+  <custom-footer></custom-footer>
+ <!----------------------------------------------Modal---------------------------------------------->
+
+  
+  <div id="cart-modal">
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title">Cart</h1>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="cart-body">
+                    <!--items show here-->      
+                  </div>
+      
+      
+              </div>
+              <div class="modal-footer border-top-0 d-flex justify-content-between">
+                  <button type="button" class="btn btn-outline-yelow btn-lg" onclick="clearCart()">Clear Cart</button>
+                  <button type="button" class="btn btn-yelow btn-lg  checkout-btn"
+                      onclick="goToCheckout()">Checkout</button>
+              </div>
+          </div>
+      </div>
+      
+      </div>  
+  </div>
+
+  
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+
+  <!-- my script files here -->
+  <script type="module" src="Assets/Script/additems.js"></script>
+  <script src="Assets/Script/Script.js"></script>
+  <script src="Assets/Script/footer.js"></script>
+  <script src="Assets/Script/addToCard.js"></script>
+  <script src="Assets/Script/search.js"></script>
+  </body>
+
+</body>
+</body>
+
+</html>

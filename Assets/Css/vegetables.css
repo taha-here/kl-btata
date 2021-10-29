@@ -1,0 +1,154 @@
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(./cart.css);
+@import url(./navbar.css);
+@import url(./card.css);
+/*****************************************Some Common css*****************************************/
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+.bg-back {
+  background-color: #27272e;
+}
+
+.text-back {
+  color: #27272e;
+}
+.text-gray {
+  color: #a9a9a9;
+}
+.bg-gray {
+  background-color: #ccc;
+}
+.bg-yelow {
+  background-color: #f9b700;
+}
+.text-yelow {
+  color: #f9b700 !important;
+}
+.text-size {
+  font-size: 1.5em;
+}
+.text-size-lg {
+  font-size: 2em;
+}
+.text-size-sm {
+  font-size: 1.25em;
+}
+.text-rd {
+  color: #cc3333 !important;
+}
+.bg-transparent
+{
+    background-color: transparent;
+}
+/*****************************************Social icons css*****************************************/
+.fa-facebook-square,
+.fa-instagram,
+.fa-twitter-square,
+.fa-linkedin-square {
+  transition: 0.3s;
+}
+.fa-facebook-square:hover {
+  color: #4267b2;
+}
+.fa-instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-twitter-square:hover {
+  color: #1da1f2;
+}
+
+.fa-linkedin-square:hover {
+  color: #0e76a8;
+}
+/*****************************************Header css*****************************************/
+
+.header {
+  background-color: #a8a8ab;
+  padding: 20px 30px 20px 20px;
+  overflow: hidden;
+}
+
+.search-text {
+  border: none;
+  font-size: 17px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.search {
+  background-color: #ffffff;
+  border: none;
+  font-size: 17px;
+  border-radius: 0px 15px 15px 0px;
+  color: #ccc;
+}
+.search:hover {
+  color: #27272e;
+}
+.position-bottom {
+  margin-top: 22px;
+}
+
+
+/*****************************************Banner css*****************************************/
+
+.banner-img {
+  background-image: url("../../Img/Vegetables/banner.jpeg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 600px;
+  background-color: #ccc;
+}
+
+.banner-text {
+  padding: 150px 290px;
+  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+}
+
+.banner-text h1,
+.banner-text h2 {
+  font-weight: bold;
+  font-size: 4rem;
+  color: #f9b700;
+}
+
+.banner-text h3 {
+  color: #fff;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+  .banner-img {
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+  }
+  .banner-text {
+    padding: 50px;
+  }
+  .banner-text h1,
+  .banner-text h2 {
+    font-size: 2.5rem;
+  }
+}
+.main-heading
+{background-color: #27272E;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;}

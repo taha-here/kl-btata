@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>search</title>
+    <title>StockMart-Search Results</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -9,45 +9,130 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="Assets/Css/search.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>&#x2728;Harry Potter Characters &#x2728;</h1>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-main sticky-top">
+      <a href="Index.html" class="navbar-brand">
+        <img src="Img/logo.png" id="logo" alt="Stock Mart"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggle"
+        aria-controls="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggle-size"></span><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="nav-toggle">
+        <ul class="navbar-nav ml-auto pr-5">
+          <li class="nav-item">
+            <a class="nav-link" href="Index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#!" id="categories" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="categories">
+              <a class="dropdown-item" href="veg-1.html">Vegetable Foods</a>
+              <a class="dropdown-item" href="staple-1.html">Staples Foods</a>
+              <a class="dropdown-item" href="meat-1.html">Fresh Meat</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+               <a id="cart-open"class="nav-link icon" href="#!" data-toggle="modal" data-target="#cart">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="cart-alert"></span>
+              </a>
+  
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid bg-back">
+    <div class="row">
+      <div class="col-lg-12 text-white text-center text-size-xlg pt-3">
+        Search Result <span class="font-weight-bold" id="textview">" "</span>
+      </div>
+    </div>  
+    
+    <div class="container p-5">
       <div id="searchWrapper">
+        <div class="input-group">
         <input
+        class="form-control"
           type="text"
           name="searchBar"
           id="searchBar"
-          placeholder="search for a character"
+          placeholder="Searh Here..."
         />
+        <div class="float-right">
+
+               <div class="pg-search"><i class="fa fa-search"></i></div>
+           </div>
+       </div>
+    </div>
+    </div>
+    </div>  
+      <div class="container mt-5">
+        <div class="row"  id="item-display"></div>
       </div>
-      <ul id="search-display"></ul>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="Assets/Script/searchview.js"></script>
+
+  <!----------------------------------------------Footer---------------------------------------------->
+
+  <custom-footer></custom-footer>
+ <!----------------------------------------------Modal---------------------------------------------->
+
+  
+  <div id="cart-modal">
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title">Cart</h1>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="cart-body">
+                    <!--items show here-->      
+                  </div>
+      
+      
+              </div>
+              <div class="modal-footer border-top-0 d-flex justify-content-between">
+                  <button type="button" class="btn btn-outline-yelow btn-lg" onclick="clearCart()">Clear Cart</button>
+                  <button type="button" class="btn btn-yelow btn-lg  checkout-btn"
+                      onclick="goToCheckout()">Checkout</button>
+              </div>
+          </div>
+      </div>
+      
+      </div>  
+  </div>
+
+  
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+
+  <!-- my script files here -->
+<script src="Assets/Script/Script.js"></script>
+<script src="Assets/Script/footer.js"></script>
+<script src="Assets/Script/addToCard.js"></script>
+<script src="Assets/Script/search.js"></script>
+
+
+<script type="module" src="Assets/Script/searchview.js"></script>
   </body>
 </html>

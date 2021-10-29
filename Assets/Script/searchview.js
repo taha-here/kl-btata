@@ -1,66 +1,58 @@
-import { ahmed } from "./search.js";
-console.log(ahmed);
+import { product_items } from "./items.js";
+var searchText = sessionStorage.getItem("searchtext");
+var textdisplay= document.getElementById('textview');
+textdisplay.innerHTML=`" ${searchText} "`;
+var textnothing=`<div class="col-lg-12">
+                  <h1>
+                  <span class='font-weight-bold'>NOTHING</span> FOUND
+                  </h1>
+                  <p>Sorry, but nothing matched with your search. Please try again with some different keywords.</p>
+                  </div>`;
 
-
-const searchview = document.getElementById("search-display");
-const displayCharacters = (characters) => {
-  const htmlString = characters
-    ?.map((character) => {
-      return `
-              <li class="character">
-                  <h2>${character.name}</h2>
-                  <p>House: ${character.house}</p>
-                  <img src="${character.image}"></img>
-              </li>
+const displayItem = document.getElementById("item-display");
+const cardview = (item) => {
+  const cardData =
+    item
+      ?.map((item) => {
+        return `
+        <div class="col-lg-4 pt-5">
+        <div class="card card-item" id="${item.catId}">
+          <img class="card-img-top" src="${item.img}" alt="">
+          <div class="card-body text-center">
+            <h1 class="card-title">${item.name}</h1>
+            <p class="card-text">Price: ${item.price} ${item.unit}</p>
+            <p class="card-text">Item: <input class="card-qty" type="number" value=1 max=10 min=1 ></p>
+            <p><button class="btn btn-lg btn-block addtocart" onclick="add_to_cart(${item.pId},'${item.name}',${item.price},1,'${item.img}')" >Add to <span class="cartbtn">Cart</span></button></p>
+          </div>
+        </div>
+  </div>
               `;
-    })
-    .join("") || 'no results to display';
-    searchview.innerHTML = htmlString;
+      })
+      .join("") || textnothing;
+  displayItem.innerHTML = cardData;
 };
 
-
 const searchBar = document.getElementById("searchBar");
-      //const searchtext = JSON.parse(sessionStorage.getItem("searchtext"));
-      let strsearch = sessionStorage.getItem("search");
-      let stsearch = JSON.parse(strsearch);
-      console.log(stsearch);
-
-        searchBar.addEventListener("keyup", (e) => {
-            const searchString = e.target.value.toLowerCase();
-
-            const filteredCharacters = ahmed.filter((character) => {
-              return (
-                character.name.toLowerCase().includes(searchString) ||
-                character.house.toLowerCase().includes(searchString)
-              );
-            });
-            sessionStorage.setItem(
-              "filteredCharacters",
-              JSON.stringify(filteredCharacters)
-            );
-            console.log(filteredCharacters)
-            displayCharacters(filteredCharacters);
-          }
-        );
-        searchBar.value = stsearch;
-        const strchr = sessionStorage.getItem("filteredCharacters");
-        console.log(strchr);
-
-        const filtereditem = JSON.parse(strchr);
-        displayCharacters(filtereditem);
-        /**
-        const htmlString = filtereditem.map((item) => {
-            return `
-                        <li class="character">
-                            <h2>${item.name}</h2>
-                            <p>House: ${item.house}</p>
-                            <img src="${item.image}"></img>
-                        </li>
-                    `;
-          })
-          .join("");
-        charactersList.innerHTML = htmlString;    
-        **/
-        sessionStorage.clear();   
-        
-        
+searchBar?.addEventListener("keyup", (e) => {
+  if (13 == e.keyCode) {
+    const searchval= e.target.value;
+    const searchString = searchval.toLowerCase();
+    textdisplay.innerHTML=`" ${searchval} "`;
+    const filteredCharacters = product_items.filter((item) => {
+      return (item.name.toLowerCase().includes(searchString)||
+              item.catId.toLowerCase().includes(searchString)
+    );
+  });
+    cardview(filteredCharacters);
+  }
+}) || searchimport();
+function searchimport() {
+  searchBar.value = searchText;
+  const searchString = searchText.toLowerCase();
+  const filteredCharacters = product_items.filter((item) => {
+    return (item.name.toLowerCase().includes(searchString)||
+    item.catId.toLowerCase().includes(searchString)
+);
+  });
+  cardview(filteredCharacters);
+}

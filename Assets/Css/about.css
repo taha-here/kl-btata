@@ -1,0 +1,61 @@
+@import url(./common.css);
+@import url(./navbar.css);
+@import url(./cart.css);
+	/*.bg_img{background-image: url(Img/1.jpg); background-repeat: no-repeat;}
+	.bg_colorimg{background-color: aqua; width: 100%}
+	*/
+
+	.img_size{width: 100%;}
+	.about_color{background-color:  #BFCBA8; color: #27272E; font-family: Nunito,Helvetica, sans-serif}
+	.txt_color{color: #27272E; font-family: Nunito,Helvetica, sans-serif}
+	.border_radius{border-radius: 20px;}
+	.fixed-bg {
+  background-image: url("../../Img/1.jpg");
+  min-height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-dialog {
+    height: 50%;
+    width: 50%;
+    margin: auto
+}
+
+.modal-header {
+    color: #27272E;
+    background-color: #f9b700;
+}
+
+textarea {
+    border: none;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    outline: 0px !important
+}
+
+.openmodal {
+    margin-left: 35%;
+    width: 25%;
+    margin-top: 20px;
+}
+
+.icon1 {
+    color: #007bff
+}
+
+a {
+    margin: auto
+}
+
+input {
+    color: #27272E;
+}
+
+
+.img_high{height:500px;background-color:white;}
+.cross_button{color: white;}
+.bg_serverice_color{background-color: #BFCBA8; margin-top: 15px;}
+.div_white{background-color: white;width: 100%; height: 50px;}

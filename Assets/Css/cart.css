@@ -1,0 +1,100 @@
+/*****************************************cart css*****************************************/
+
+.btn-yelow {
+    color: #fff;
+    background-color: #f9b700;
+    transition: ease-in-out 0.3s;
+  }
+  .btn-yelow:hover:not(:disabled){
+    color: #f9b700;
+    background-color: #27272e;
+  }
+  .btn-yelow:hover:disabled{
+    color: #fff;
+    cursor: not-allowed;
+  }
+  .btn-outline-yelow {
+    background-color: #fff;
+    color: #f9b700;
+    border: solid 1px #f9b700;
+    transition: ease-in-out 0.3s;
+  }
+  .btn-outline-yelow:hover {
+    color: #fff;
+    background-color: #f9b700;
+  }
+  .btn-rd {
+    background-color: #cc3333;
+    transition: 0.3s;
+  }
+  .btn-rd {
+    color: #fff;
+    background-color: #cc3333;
+    transition: 0.3s;
+  }
+  .btn-rd:hover {
+    color: #cc3333;
+    border: solid 1px #cc3333;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  .cart-sm-text {
+    color: #a9a9a9;
+    font-size: 0.65em;
+  }
+  
+  td.table-data
+  {
+    text-align: center;
+    vertical-align: baseline;
+  }
+  .cart-img {
+    width: 75px;
+  }
+  @media screen and (max-width: 580px) {
+    .cart-img {
+      width: 50px;
+    }
+    .btn-rd {
+      padding: 0.25rem 0.75rem;
+    }
+  }
+  
+
+
+
+.deleting{
+    animation: deleting 1500ms ease forwards;
+}
+
+.empty-cart{
+    opacity: 0;
+    animation: fadeIn 1000ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0
+    }
+    100%{
+        opacity: 1
+    }
+}
+
+@keyframes deleting {
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    30%{
+        transform: translateX(0);
+        opacity: 0.7;
+        filter: blur(1px);
+        background: #f8d7da;
+        color: #721c24;
+    }
+    100%{
+        transform: translateX(150%);
+        opacity: 0.3
+    }
+}

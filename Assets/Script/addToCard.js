@@ -45,26 +45,6 @@ function add_to_cart(pid, pname, pprice, pquan, pimg) {
   updateCart();
 }
 
-$(".cart-here").click(function (event) {
-  event.preventDefault();
-  let id = 1;
-  let name = "Red Apple";
-  let price = 300;
-  let quantity = 2;
-  let img =
-    "https://static5.depositphotos.com/1020804/405/i/950/depositphotos_4058882-stock-photo-ripe-red-apple-with-a.jpg";
-  add_to_cart(id, name, price, quantity, img);
-});
-$(".cart-there").click(function (event) {
-  event.preventDefault();
-  let id = 2;
-  let name = "green Apple";
-  let price = 200;
-  let quantity = 5;
-  let img =
-    "https://static5.depositphotos.com/1020804/405/i/950/depositphotos_4058882-stock-photo-ripe-red-apple-with-a.jpg";
-  add_to_cart(id, name, price, quantity, img);
-});
 
 //update cart:
 function updateCart() {
@@ -104,7 +84,7 @@ function updateCart() {
 						<td class="table-data">Rs. ${item.productPrice}</td>
 						<td class="table-data qty">
 							<div class='input-group'>
-							<input type='number' min=1 class='val-num form-control display-inline'  onchange="qauntityChange(this.value,${
+							<input type='number' min=1 max=10 class='val-num form-control display-inline'  onchange="qauntityChange(this.value,${
                 item.productId
               })" value='${item.productQuantity}'>
 							</div>
@@ -175,7 +155,8 @@ function qauntityChange(pquan, pid) {
 
   let newcart = cart.map((item) => {
     if (item.productId == pid) {
-      return { ...item, productQuantity: pquan };
+      var quantity=parseInt(pquan);
+      return { ...item, productQuantity: quantity };
     } else {
       return item;
     }

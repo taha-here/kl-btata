@@ -1,0 +1,72 @@
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+/*****************************************Some Common css*****************************************/
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+.bg-back {
+  background-color: #27272e;
+}
+
+.text-back {
+  color: #27272e;
+}
+.text-gray {
+  color: #a9a9a9;
+}
+.bg-gray {
+  background-color: #ccc;
+}
+.bg-yelow {
+  background-color: #f9b700;
+}
+.text-yelow {
+  color: #f9b700 !important;
+}
+.text-size {
+  font-size: 1.5em;
+}
+.text-size-lg {
+  font-size: 2em;
+}
+.text-size-xlg {
+  font-size: 4em;
+}
+.text-size-sm {
+  font-size: 1.25em;
+}
+.text-rd {
+  color: #cc3333 !important;
+}
+
+/*****************************************Social icons css*****************************************/
+.fa-facebook-square,
+.fa-instagram,
+.fa-twitter-square,
+.fa-linkedin-square {
+  transition: 0.3s;
+}
+.fa-facebook-square:hover {
+  color: #4267b2;
+}
+.fa-instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-twitter-square:hover {
+  color: #1da1f2;
+}
+
+.fa-linkedin-square:hover {
+  color: #0e76a8;
+}

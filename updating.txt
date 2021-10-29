@@ -1,0 +1,5 @@
+data entry 
+value change input num
+checkout 
+pagenation
+deals data
