@@ -58,7 +58,7 @@ function searchimport() {
 }
 
 document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('click', () => {
+  card.querySelector('.addtocart').addEventListener('click', () => {
     const prodId = Number(card.dataset.id);
     const prodName = card.querySelector('.card-title').textContent;
     const prodPrice = Number(card.querySelector('.card-text span').textContent);
