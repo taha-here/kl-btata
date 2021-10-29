@@ -8,7 +8,7 @@ const cardview = (item) => {
     ?.map((item) => {
       return `
       <div class="col-lg-4 pt-5">
-      <div class="card card-item" id="${item.catId} data-id=${item.pId}">
+      <div class="card card-item" id="${item.catId}" data-id="${item.pId}">
         <img class="card-img-top" src="${item.img}" alt="">
         <div class="card-body text-center">
           <h1 class="card-title">${item.name}</h1>
