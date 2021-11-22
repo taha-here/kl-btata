@@ -26,9 +26,8 @@ template.innerHTML = `
         <h2 class="text-white text-center">Quick Links:</h2>
         <ul class="list-unstyled text-center font-weight-bold text-gray text-size mt-2">
           <li><a class="text-reset" href="Index.html">Home</a></li>
-          <li><a class="text-reset" href="Categories.html">Categories</a></li>
-          <li><a class="text-reset" href="Contact.html">Contact</a></li>
-          <li><a class="text-reset" href="About.html">About</a></li>
+          <li><a class="text-reset" href="contactus.html">Contact</a></li>
+          <li><a class="text-reset" href="aboutus.html">About</a></li>
         </ul>
       </div>
     </div>
