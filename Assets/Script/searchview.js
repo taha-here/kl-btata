@@ -16,7 +16,7 @@ const cardview = (item) => {
       ?.map((item) => {
         return `
         <div class="col-lg-4 pt-5">
-        <div class="card card-item" id="${item.catId}" data-id=${prodId}>
+        <div class="card card-item" id="${item.catId}" data-id="${item.pId}">
           <img class="card-img-top" src="${item.img}" alt="">
           <div class="card-body text-center">
             <h1 class="card-title">${item.name}</h1>
@@ -59,6 +59,7 @@ function searchimport() {
 
 document.querySelectorAll('.card').forEach(card => {
   card.querySelector('.addtocart').addEventListener('click', () => {
+    console.log(123)
     const prodId = Number(card.dataset.id);
     const prodName = card.querySelector('.card-title').textContent;
     const prodPrice = Number(card.querySelector('.card-text span').textContent);

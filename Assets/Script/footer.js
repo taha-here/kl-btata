@@ -7,7 +7,7 @@ template.innerHTML = `
 <div class="container-fluid mt-5">
 <div class="row pt-2 bg-back">
   <div class="col-lg-4">
-    <img src="Img/logo.png" title="StockMart" width=465" alt="StockMart" />
+    <img src="Img/logo.png" title="StockMart" width="100%" alt="StockMart" />
     <div class="card bg-transparent border-0">
       <div class="card-body">
         <h2 class="text-center text-white">Manage By:</h2>
@@ -26,8 +26,9 @@ template.innerHTML = `
         <h2 class="text-white text-center">Quick Links:</h2>
         <ul class="list-unstyled text-center font-weight-bold text-gray text-size mt-2">
           <li><a class="text-reset" href="Index.html">Home</a></li>
-          <li><a class="text-reset" href="contactus.html">Contact</a></li>
-          <li><a class="text-reset" href="aboutus.html">About</a></li>
+          <li><a class="text-reset" href="Index.html">Categories</a></li>
+          <li><a class="text-reset" href="Contactus.html">Contact</a></li>
+          <li><a class="text-reset" href="About.html">About</a></li>
         </ul>
       </div>
     </div>

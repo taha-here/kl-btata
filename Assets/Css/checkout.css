@@ -1,0 +1,23 @@
+@import url(./common.css);
+@import url(./navbar.css);
+
+.checkoutback {
+  background-image: url("/Img/checkoutback.jpeg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 1000px;
+  background-color: #ccc;
+}
+.radius {
+  border-radius: 30 px;
+}
+
+
+.fa-whatsapp
+{
+    font-size: 2em;
+    padding-right: 10
+px
+;
+}

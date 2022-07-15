@@ -267,7 +267,7 @@ export let product_items = [
   catId: "staples",
   pId:35,
   name: "Falak Sella Rice",
-  img: "img/staples/Sella Rice .jpg",
+  img: "img/staples/Sella Rice.jpg",
   price: 105,
   unit: "Per kg",
 }, 
@@ -545,6 +545,30 @@ export let product_items = [
   price: 350,
   unit: "Per kg",
 },
-
+/***********************Deals************************ */
+{
+  catId: "Deals",
+  pId:1001,
+  name: "Vegetable Deal",
+  img: "Img/Home/vegetables modal.jpg",
+  price: 5000,
+  unit: "Per Box",
+},
+{
+  catId: "Deals",
+  pId:1002,
+  name: "Staples Deal",
+  img: "Img/Home/staples modal.jpg",
+  price: 5000,
+  unit: "Per Box",
+},
+{
+  catId: "Deals",
+  pId:1003,
+  name: "Monthly Deal",
+  img: "Img/Home/Monthly modal.jpg",
+  price: 10000,
+  unit: "Per Box",
+},
 ];
 

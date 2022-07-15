@@ -1,6 +1,6 @@
  // Change Date The Month Here*********************///
- var countDownDate = new Date("Nov 1, 2021 00:00:00").getTime();
-
+ var countDownDate = new Date();
+ countDownDate.setMonth(countDownDate.getMonth() + 1);
  var x = setInterval(function () {
    var now = new Date().getTime();
    var distance = countDownDate - now;

@@ -42,8 +42,8 @@
 
 
   <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-main sticky-top">
-    <a href="Index.html" class="navbar-brand  page-down-preview" style="display: none;">
-      <img src="Img/logo.png" id="logo" alt="Stock Mart"></a>
+    <a href="Index.html" class="navbar-brand ">
+      <img class="page-down-preview" width="100%"style="display: none;"  src="Img/logo.png" id="logo" alt="Stock Mart"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggle"
       aria-controls="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
       <span class="toggle-size"></span><i class="fa fa-bars" aria-hidden="true"></i></span>
@@ -62,7 +62,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="categories">
             <a class="dropdown-item" href="veg-1.html">Vegetable Foods</a>
-            <a class="dropdown-item" href="staples-1.html">Staples Foods</a>
+            <a class="dropdown-item" href="staple-1.html">Staples Foods</a>
             <a class="dropdown-item" href="meat-1.html">Fresh Meat</a>
           </div>
         </li>
@@ -132,7 +132,7 @@
             <div class="content">
               <h3>Vegetables offer</h3>
               <p class="text-back">upto 45% off</p>
-              <button class="btn btn-viewnow" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">View Now</button>
+              <button class="btn btn-viewnow" data-toggle="modal" data-target="#deal1">View Now</button>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@
             <div class="content">
               <h3>Stapples offer</h3>
               <p class="text-back">upto 50% off</p>
-              <button class="btn btn-viewnow" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">View Now</button>
+              <button class="btn btn-viewnow" data-toggle="modal" data-target="#deal2">View Now</button>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="card top-deal cat-size " onclick="location.href='staples-1.html';" style="cursor: pointer;">
+        <div class="card top-deal cat-size " onclick="location.href='staple-1.html';" style="cursor: pointer;">
           <img src="Img/Home/staple-categories.jpg" alt="Staple categories">
           <div class="content" id="cat-1">
             <h3>Staples Food</h3>
@@ -212,7 +212,8 @@
             fresh meat, vegetable and staples products. Most of our loyal customers do not skip visiting Stockmart for
             monthly deals. You can avail special offers on range of edible vegetables, fresh meat and staples products
             every Month.</p>
-          <button class="btn btn-deal mb-5" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Check The <span class="text-yelow">Deal</span></button>
+          <button class="btn btn-deal mb-5" data-toggle="modal" data-target="#deal3">Check
+            The <span class="text-yelow">Deal</span></button>
         </div>
         <div class="col-lg-8">
 
@@ -291,36 +292,169 @@
 
     </div>
   </div>
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+  <!--Deal1 modal-->
+  <div class="modal fade" id="deal1" tabindex="-1" role="dialog" aria-labelledby="deal1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <h5 class="modal-title text-back font-weight-bolder text-size-lg">Vegetables Deal</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="recipient-name" class="col-form-label">Recipient:</label>
-              <input type="text" class="form-control" id="recipient-name">
+          <div class="row">
+            <div class="col-lg-5">
+
+              <ul class="text-back">
+                <li>Carrot 2Kg</li>
+                <li>Olive 2Kg</li>
+                <li>Sweet Potatos 3Kg</li>
+                <li>Green Chili 1Kg</li>
+                <li>Cabbage 2Kg</li>
+                <li>Orka 3Kg</li>
+                <li>Corn 3Kg</li>
+                <li>Celery 5Kg</li>
+                <li>Beetroot 3Kg</li>
+                <li>Garlic 1.5Kg</li>
+                <li>Haripiaz 2.5Kg</li>
+                <li>Round Ground  2Kg</li>
+                <li>PineApple 2Kg</li>
+                <li>Tommato 3Kg</li>
+                <li>Pumkin 4Kg</li>
+                  <li>Green Beans 2Kg</li>
+                 <li>Bell Pepper 2Kg</li>
+                 <li>Potatos 6Kg</li>
+                 <li>Onion 2Kg</li>
+                 <li>Spanish 5 Bundles</li>
+                 <li>Pea 3Kg</li>
+                 <li>Lemon 2Kg</li>
+                 <li>Mashroom 3Kg</li>
+                 <li>Bottle Ground 2Kg</li>
+                 <li>Radish 3Kg</li>
+                 <li>Fenugreek Leaves 3 Bundels</li>
+              </ul>
+
+
             </div>
-            <div class="form-group">
-              <label for="message-text" class="col-form-label">Message:</label>
-              <textarea class="form-control" id="message-text"></textarea>
+            <div class="col-md-7">
+              <img width="100%" src="Img/Home/vegetables modal.jpg">
+              <p class="text-size-lg m-5 text-back font-weight-bolder">Price :5000</p>
+
             </div>
-          </form>
+          </div>
+
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
+        <div class="modal-footer border-top-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-outline-yelow btn-lg" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-yelow btn-lg"
+            onclick="add_to_cart(1001,'Vegetables Deal',5000,1,'Img/Home/vegetables modal.jpg')">Add To Cart</button>
         </div>
       </div>
     </div>
   </div>
+<!--Deal2 modal-->
+  <div class="modal fade" id="deal2" tabindex="-1" role="dialog" aria-labelledby="deal1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-back font-weight-bolder text-size-lg">Staples Deal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-5">
 
+              <ul class="text-back">
+                <li>Flour 10Kg</li>
+                <li>Rice 10Kg</li>
+                <li>Sugar 5Kg</li>
+                <li>Teapowder 1Kg</li>
+                <li>Salt 2 Packets</li>
+                <li>Butter 3Kg</li>
+                <li>Red Chili 1Kg</li>
+                <li>Coriander Powder 1kg</li>
+                <li>Turmeric Powder</li>
+                <li>Black Eye Beans 2Kg</li>
+                <li>Red Eye Beans 2Kg</li>
+                <li>Lentil Beans 2Kg</li>
+                <li>White Chickpea 2Kg</li>
+                <li>Chickpea lentils 3Kg</li>
+                <li>Black Chickpeas 2Kg</li>
+              </ul>
+
+
+            </div>
+            <div class="col-md-7">
+              <img width="100%" src="Img/Home/staples modal.jpg">
+              <p class="text-size-lg m-5 text-back font-weight-bolder">Price :4999</p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer border-top-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-outline-yelow btn-lg" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-yelow btn-lg"
+            onclick="add_to_cart(1002,'Staple Deal',5000,1,'Img/Home/staples modal.jpg')">Add To Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Deal3 modal-->
+<div class="modal fade" id="deal3" tabindex="-1" role="dialog" aria-labelledby="deal1" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-back font-weight-bolder text-size-lg">Monthly Deal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5">
+
+            <ul class="text-back">
+              <	<li>Carrot 2Kg</li>
+              <li>Olive 2Kg</li>
+              <li>Sweet Potatos 3Kg</li>
+              <li>Green Chili 1Kg</li>
+              <li>Cabbage 2Kg</li>
+              <li>Orka 3Kg</li>
+              <li>Flour 10Kg</li>
+              <li>Rice 10Kg</li>
+              <li>Butter 3Kg</li>
+              <li>White Chickpea 2Kg</li>
+              <li>Black Chickpeas 2Kg</li>
+              <li>Sugar 5Kg</li>
+              <li>Mutton Mince 3Kg</li>
+              <li>Mutton Mix Cube 2Kg</li>
+              <li>Chicken Mince 3Kg</li>
+                <li>Beef Mince 3Kg</li>
+               <li>Beef Mix Cubes 3Kg</li>
+            </ul>
+
+
+          </div>
+          <div class="col-md-7">
+            <img width="100%" src="Img/Home/Monthly modal.jpg">
+            <p class="text-size-lg m-5 text-back font-weight-bolder">Price :10000</p>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer border-top-0 d-flex justify-content-between">
+        <button type="button" class="btn btn-outline-yelow btn-lg" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-yelow btn-lg"
+          onclick="add_to_cart(1003,'Monthly Deal',10000,1,'Img/Home/Monthly modal.jpg')">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
